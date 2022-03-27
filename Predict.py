@@ -17,7 +17,7 @@ from keras.models import load_model
 Predict (Classify New Images)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 #Category Names
-cat = os.listdir("C:/Users/Eileanor/Desktop/Hackathon/output/test")
+cat = os.listdir("./output/test")
 
 #Load and prepare the image
 def load_image(filename):
@@ -37,5 +37,5 @@ def run_example(filepath):
     print(cat[index])
  
 #Entry point, run the example
-run_example('C:/Users/Eileanor/Desktop/Hackathon/Test/test.jpg')
-run_example('C:/Users/Eileanor/Desktop/Hackathon/Test/test1.jpg')
+run_example('./Test/test.jpg')
+run_example('./Test/test1.jpg')
