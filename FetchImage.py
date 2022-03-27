@@ -8,7 +8,7 @@ import io
 import os
 import hashlib
 from PIL import Image
-DRIVER_PATH = 'C:/Users/Eileanor/Desktop/Scraping/chromedriver.exe'
+DRIVER_PATH = './chromedriver.exe'
 wd = webdriver.Chrome(executable_path=DRIVER_PATH)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
