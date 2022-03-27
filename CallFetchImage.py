@@ -5,7 +5,7 @@ Created on Fri Mar 25 21:00:18 2022
 @author: Eileanor
 """
 
-DRIVER_PATH = 'C:/Users/Eileanor/Desktop/Scraping/chromedriver.exe'
+DRIVER_PATH = './chromedriver.exe'
 
 from FetchImage import search_and_download
 
