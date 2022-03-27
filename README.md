@@ -42,7 +42,7 @@ Augment data more to make it more representational of user data (i.e. darken pho
 Add K-fold validation. 
 Tune hyperparameters of the model more, look into transfer learning solutions. 
 Add script to ensure deduplication of data collected as the data is shuffled before splitting into training, validation, and testing sets and duplicates will degrade the model accuracy. 
-Get rid of hardcoded file paths and variables such as the list of categories to search for which will need to be updated. 
+Get rid of hardcoded variables such as the list of categories to search for which will need to be updated. 
 Move everything to Google Cloud or AWS for increased storage and compute power. 
 Connect to USDA FoodData API to retrieve nutrient information based on the classification output.
 
