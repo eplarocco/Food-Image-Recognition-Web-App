@@ -7,4 +7,4 @@ Created on Sat Mar 26 11:05:20 2022
 
 #Create test, train, and validation sets from image folders
 import splitfolders
-splitfolders.ratio("C:/Users/Eileanor/Desktop/Hackathon/images", output="output", seed=1337, ratio=(.8,.1,.1), group_prefix=None, move=True)
+splitfolders.ratio("./images", output="output", seed=1337, ratio=(.8,.1,.1), group_prefix=None, move=True)
