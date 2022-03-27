@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Load Data
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-base_dir = "C:/Users/Eileanor/Desktop/Hackathon/output"
+base_dir = "./output"
 train_dataset = image_dataset_from_directory(
     os.path.join(base_dir, 'train'),
     image_size=(180, 180),
