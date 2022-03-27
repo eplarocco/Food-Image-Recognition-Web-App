@@ -9,7 +9,7 @@ Continuous Glucose Monitors (CGMs) constantly measure and report a person's bloo
 
 Web App that takes a user image (.jpg) of a food item (as of now only spaghetti, hamburgers, hot dogs, grilled cheese, chicken nuggets, and french fries) and returns the name of that food item. The end goal is to connect what I have created to the USDA FoodData database and return nutritional data to the user. This could provide faster and more accurate estimates of blood sugar levels for the user.
 
-**Note:** Due to lack of memory, compute power, time, and money, what I have created is a proof of concept of a low-cost highly representational data collection method and model for food image analysis. At the moment the model is only trained to classify images of 6 foods (spaghetti, hamburgers, hot dogs, grilled cheese, chicken nuggets, and french fries). There are about 150 images per category which is most likely the main cause of the low accuracy rate achieved.
+**Note:** Due to lack of memory, compute power, time, and money, what I have created is a proof of concept of a low-cost highly representational data collection method and model for food image analysis. At the moment the model is only trained to classify images of 6 foods but could easily scale to 10,000.
 
 ## How I built it
 
@@ -17,7 +17,7 @@ First, I used Selenium to search for and download images from Google Images give
 
 ## Challenges I ran into
 
-While food image data sets are available on kaggle and other sources, none can be leveraged for commercial use. Thus, creating a data collection method using Google Images that was representative of user images (which will likely be blurrier, darker, angled, etc. compared to more professional photos included in Google Images) was my first main challenge. 
+While food image data sets are available on kaggle and other sources, none can be leveraged for commercial use. Thus, creating a data collection method using Google Images that was representative of user images (which will likely be blurrier, darker, angled, etc. compared to more professional photos included in Google Images) was my first main challenge.  Next, I was unable to achieve an accuracy rate of more than around 50-60% most likely due to the lack of data I had collected. There are only about 150 images per category. However, 50-60% is still well above a random guess baseline and a good start for alleviating time on part of the user. Lastly, I wanted to create a basic web app with flask but that was beyond my scope for the weekend.
 
 **Unsolved Bugs:** CallFetchImage2.py is returning slightly more images then I specify but the printed response I have for bug-checking is returning the correct amount of responses. Additionally, the search term “pizza” makes it crash.
 
@@ -45,7 +45,7 @@ Add script to ensure deduplication of data collected as the data is shuffled bef
 Get rid of hardcoded variables such as the list of categories to search for which will need to be updated. 
 Move everything to Google Cloud or AWS for increased storage and compute power. 
 Connect to USDA FoodData API to retrieve nutrient information based on the classification output.
-
+Create the Web App.
 
 ## File Structure
 
@@ -57,4 +57,4 @@ Folders.py – Splits the category folders into training, validation, and testin
 
 NN2.py – Augments data and trains/saves CNN model for use in Predict.py
 
-Predict.py – Defines functions using saved model to predict category of .jpg
+Predict.py – Defines functions using saved model to predict category of .jpg and currently tests a few predictions
